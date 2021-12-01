@@ -29,7 +29,7 @@
                                <div class="invalid-feedback">name field cannot be blank!</div>      
                             </div>
                             <div class="col-md-12">
-                                <input class="form-control" type="text" name="First name" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40" placeholder="FirstName" required>
+                                <input class="form-control" type="text" name="First name" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40" placeholder="First Name" name="Firstname"required>
                                 <div class="valid-feedback">name field is valid!</div>
                                 <div class="invalid-feedback">name field cannot be blank!</div>      
                              </div>
@@ -129,11 +129,11 @@
                             </div>
 
                             <div class="col-md-12">
-                                <select class="form-select mt-3" required>
+                                <select name="budget" class="form-select mt-3" required>
                                       <option selected disabled value="">Monthly budget for services</option>
-                                      <option value="jweb">less than $50</option>
-                                      <option value="sweb">between $50 and $100</option>
-                                      <option value="pmanager">More than $100</option>
+                                      <option value="less than $50">less than $50</option>
+                                      <option value="between $50 and $100">between $50 and $100</option>
+                                      <option value="More than $100">More than $100</option>
 >
                                </select>
                                 <div class="valid-feedback">You selected a budget</div>
