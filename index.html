@@ -37,11 +37,11 @@
                              <div class="col-md-12">
                                 <select name="title" class="form-select mt-3" required>
                                       <option selected disabled value="">Chose preferred title</option>
-                                      <option value="jweb">None</option>
-                                      <option value="sweb">Student</option>
-                                      <option value="pmanager">Professor</option>
-                                      <option value="pmanager">Staff</option>
-                                      <option value="pmanager">Retired</option>
+                                      <option value="None">None</option>
+                                      <option value="Student">Student</option>
+                                      <option value="Professor">Professor</option>
+                                      <option value="Staff">Staff</option>
+                                      <option value="Retired">Retired</option>
                                </select>
                                 <div class="valid-feedback">You selected a title</div>
                                 <div class="invalid-feedback">Please select a title<Title></Title></div>
@@ -77,7 +77,7 @@
                          </div>
 
                          <div class="col-md-12">
-                            <input class="form-control" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="5" minlength="5" placeholder="zip" required>
+                            <input class="form-control" type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="5" minlength="5" placeholder="zip" name="zip"required>
                             <div class="valid-feedback">zip field is valid!</div>
                             <div class="invalid-feedback">zip field cannot be blank!</div>      
                          </div>

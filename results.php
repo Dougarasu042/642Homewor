@@ -31,7 +31,7 @@
                              </div>
 
                              <div class="col-md-12">
-                             First name <?php echo $_POST["title"]; ?><br>
+                             Title <?php echo $_POST["title"]; ?><br>
                              
                            </div>
 
