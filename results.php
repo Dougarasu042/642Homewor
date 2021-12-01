@@ -23,51 +23,51 @@
                         <p>Data survey form.</p>
                         <form class="requires-validation" action="results.php" method="post" novalidate>
 
-                            <div class="col-md-12 mt-3" class="text-white">
-                            Last name <?php echo $_POST["Lastname"]; ?><br>      
+                        <div class="col-md-12 mt-3" >
+                        <p class="text-white">        Last name: <?php echo $_POST["Lastname"]; ?><br>  </p>    
                             </div>
-                            <div class="col-md-12">
-                            First name <?php echo $_POST["FirstName"]; ?><br>      
-                             </div>
+                            <div class="col-md-12 mt-3" >
+                            <p class="text-white">   First name: <?php echo $_POST["name"]; ?><br>    </p>  
+                            </div>      
 
                              <div class="col-md-12">
-                             Title <?php echo $_POST["title"]; ?><br>
+                             <p class="text-white">   Title: <?php echo $_POST["title"]; ?><br></p>
                              
                            </div>
 
                            <div class="col-md-12">
-                           Height <?php echo $_POST["Height"]; ?><br>     
+                           <p class="text-white">   Height: <?php echo $_POST["Height"]; ?><br>   </p>  
                          </div>
 
                          <div class="col-md-12">
-                         Phone Number <?php echo $_POST["Phone"]; ?><br>       
+                         <p class="text-white">  Phone Number: <?php echo $_POST["Phone"]; ?><br>   </p>    
                          </div>
 
                          <div class="col-md-12">
-                         Street address <?php echo $_POST["Street"]; ?><br>
+                         <p class="text-white">    Street address: <?php echo $_POST["Street"]; ?><br></p>
       
                          </div>
                          <div class="col-md-12">
-                         City <?php echo $_POST["City"]; ?><br>     
+                         <p class="text-white">   City: <?php echo $_POST["City"]; ?><br>  </p>   
                          </div>
 
                          <div class="col-md-12">
-                         State <?php echo $_POST["State"]; ?><br>      
+                         <p class="text-white">    State: <?php echo $_POST["State"]; ?><br>      </p>
                          </div>
 
                          <div class="col-md-12">
-                         zip <?php echo $_POST["zip"]; ?><br>
+                         <p class="text-white">    zip: <?php echo $_POST["zip"]; ?><br></p>
      
                          </div>
                       
 
                             <div class="col-md-12">
-                            Email: <?php echo $_POST["email"]; ?><br>
+                            <p class="text-white">      Email: <?php echo $_POST["email"]; ?><br></p>
 
                             </div>
 
                             <div class="col-md-12">
-                            Budget <?php echo $_POST["budget"]; ?><br>
+                            <p class="text-white">      Budget: <?php echo $_POST["budget"]; ?><br></p>
 
                             </div>
 

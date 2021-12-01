@@ -21,18 +21,19 @@
                         <h3>Hurtado Aragon Douglas
                         </h3>
                         <p>Data survey form.</p>
-                        <form class="requires-validation" action="results.php" method="post" novalidate>
+                        <form class="requires-validation" action="results.php" method="post" onsubmit="return checkform(this);" novalidate>
 
                             <div class="col-md-12 mt-3">
-                               <input class="form-control" class="mb-3 mr-1" type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40" name="Lastname" placeholder="Last Name" required>
+                               <input class="form-control"  type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40" name="Lastname" placeholder="Last Name" required>
                                <div class="valid-feedback">name field is valid!</div>
                                <div class="invalid-feedback">name field cannot be blank!</div>      
                             </div>
-                            <div class="col-md-12">
-                                <input class="form-control" type="text" name="First name" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40" placeholder="First Name" name="Firstname"required>
-                                <div class="valid-feedback">name field is valid!</div>
-                                <div class="invalid-feedback">name field cannot be blank!</div>      
-                             </div>
+
+                            <div class="col-md-12 mt-3">
+                              <input class="form-control"  type="text" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="40" name="name" placeholder="First name" required>
+                              <div class="valid-feedback">name field is valid!</div>
+                              <div class="invalid-feedback">name field cannot be blank!</div>      
+                           </div>
 
                              <div class="col-md-12">
                                 <select name="title" class="form-select mt-3" required>
@@ -148,11 +149,75 @@
                          <div class="invalid-feedback">Please I Agree to terms</div>
                         </div>
                   
+<!-- START CAPTCHA -->
+<br>
+<div class="capbox">
+
+<div id="CaptchaDiv"></div>
+
+<div class="capbox-inner">
+Type the number:<br>
+
+<input type="hidden" id="txtCaptcha">
+<input type="text" name="CaptchaInput" id="CaptchaInput" size="15"><br>
+
+</div>
+</div>
+<br><br>
+<!-- END CAPTCHA -->
 
                             <div class="form-button mt-3">
                                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
+                        <script type="text/javascript">
+
+                          // Captcha Script
+                          
+                          function checkform(theform){
+                          var why = "";
+                          
+                          if(theform.CaptchaInput.value == ""){
+                          why += "- Please Enter CAPTCHA Code.\n";
+                          }
+                          if(theform.CaptchaInput.value != ""){
+                          if(ValidCaptcha(theform.CaptchaInput.value) == false){
+                          why += "- The CAPTCHA Code Does Not Match.\n";
+                          }
+                          }
+                          if(why != ""){
+                          alert(why);
+                          return false;
+                          }
+                          }
+                          
+                          var a = Math.ceil(Math.random() * 9)+ '';
+                          var b = Math.ceil(Math.random() * 9)+ '';
+                          var c = Math.ceil(Math.random() * 9)+ '';
+                          var d = Math.ceil(Math.random() * 9)+ '';
+                          var e = Math.ceil(Math.random() * 9)+ '';
+                          
+                          var code = a + b + c + d + e;
+                          document.getElementById("txtCaptcha").value = code;
+                          document.getElementById("CaptchaDiv").innerHTML = code;
+                          
+                          // Validate input against the generated number
+                          function ValidCaptcha(){
+                          var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+                          var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+                          if (str1 == str2){
+                          return true;
+                          }else{
+                          return false;
+                          }
+                          }
+                          
+                          // Remove the spaces from the entered and generated code
+                          function removeSpaces(string){
+                          return string.split(' ').join('');
+                          }
+                          </script>
+                          
                     </div>
                 </div>
             </div>
