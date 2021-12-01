@@ -16,7 +16,7 @@
             <div class="form-holder">  
                 <div class="form-content">
                     <div class="form-items" class="form-inline">
-                        <h3>CSC 642 848 Fall 2021 Individual Assignment
+                        <h3>Results verification Page
                         </h3>
                         <h3>Hurtado Aragon Douglas
                         </h3>
