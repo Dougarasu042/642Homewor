@@ -23,7 +23,7 @@
                         <p>Data survey form.</p>
                         <form class="requires-validation" action="results.php" method="post" novalidate>
 
-                            <div class="col-md-12 mt-3">
+                            <div class="col-md-12 mt-3" class="text-white">
                             Last name <?php echo $_POST["Lastname"]; ?><br>      
                             </div>
                             <div class="col-md-12">
